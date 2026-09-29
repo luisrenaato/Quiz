@@ -1,5 +1,4 @@
 import java.util.Scanner;
-ola mundo
 public class Questao {
     String pergunta = "";
     String opcaoA = "";
