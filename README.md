@@ -1,31 +1,28 @@
 # QUIZ - Algoritmos e Linguagem de Programação II
 
-Projeto de Quiz desenvolvido em Java para a disciplina **Algoritmos e Linguagem de Programação II**, destinado aos alunos do 2º período dos cursos de Engenharia de Software e Segurança da Informação.
+Sistema de perguntas e respostas desenvolvido em Java para a disciplina **Algoritmos e Linguagem de Programação II**. O quiz roda no console e aborda conceitos básicos de Java.
 
-O programa roda no console e apresenta 15 questões sobre conceitos básicos da linguagem Java.
+## Requisitos da atividade
 
-## Funcionalidades
+- Exibe no início o nome do aluno, do professor e da faculdade.
+- Armazena 15 objetos `Questao` em uma `ArrayList` (declarada pela interface `List`).
+- Apresenta cada pergunta e suas alternativas, aceitando respostas de A a E.
+- Valida a entrada e aceita letras maiúsculas ou minúsculas.
+- Exibe o total de acertos e a porcentagem com duas casas decimais.
+- Agradece ao participante ao final.
 
-- 15 questões representadas por objetos da classe `Questao`
-- Armazenamento das questões em um array
-- Apresentação das alternativas no terminal
-- Uso de estruturas de repetição e condicionais
-- Validação das respostas digitadas
-- Total de acertos ao final
-- Porcentagem de aproveitamento e mensagem final conforme o desempenho
-- Respostas aceitas em letras maiúsculas ou minúsculas
+## Identificação exibida
 
-## Como o projeto funciona
-
-1. `Main.java` cria e percorre o array com as 15 questões.
-2. `Questao.java` exibe o enunciado e valida a alternativa digitada pelo usuário.
-3. Cada alternativa correta soma um ponto.
-4. Ao final, o programa calcula a porcentagem de acertos e apresenta o resultado.
+- **Aluno:** Luis Renato Silva Fernandes
+- **Professor:** Brenno Pimenta
+- **Curso:** Engenharia de Software
+- **Turma:** ESNB
+- **Faculdade:** UNIFAN
 
 ## Estrutura do projeto
 
 ```text
-Quiz-main/
+Quiz/
 |-- src/
 |   |-- Main.java
 |   `-- Questao.java
@@ -34,49 +31,33 @@ Quiz-main/
 `-- README.md
 ```
 
-## Executando pelo terminal
+`Main.java` monta a lista de questões, conduz o quiz e calcula o resultado. `Questao.java` guarda os dados de cada pergunta, exibe as alternativas e valida a resposta.
 
-Na pasta do projeto, compile e execute:
+## Como executar pelo terminal
+
+Com o JDK instalado, abra o terminal na pasta do projeto e execute:
 
 ```powershell
 javac -encoding UTF-8 -d out src/*.java
 java -cp out Main
 ```
 
-## Executando no IntelliJ IDEA
+Também é possível abrir o projeto no IntelliJ IDEA e executar o método `main` de `src/Main.java`.
 
-1. Abra o projeto no IntelliJ IDEA.
-2. Aguarde a configuração do projeto Java.
-3. Abra o arquivo `src/Main.java`.
-4. Execute o método `main`.
-
-## Formato das respostas
-
-Digite uma das letras correspondentes a uma alternativa:
-
-```text
-A
-B
-C
-D
-E
-```
-
-Respostas inválidas fazem o programa solicitar outra alternativa.
-
-## Exemplo de resultado
+## Exemplo do resultado final
 
 ```text
 =================================
           RESULTADO FINAL
 =================================
 Acertos: 15 de 15
-Aproveitamento: 100.0%
+Aproveitamento: 100,00%
 Perfeito! Você gabaritou o quiz.
+Obrigado por participar do Quiz!
 ```
 
 ## Tecnologias
 
 - Java
+- `ArrayList` e `List`
 - Console/Terminal
-- IntelliJ IDEA ou qualquer IDE compatível com Java
