@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class Questao {
+    private static final Scanner LEITOR = new Scanner(System.in);
+
     String pergunta = "";
     String opcaoA = "";
     String opcaoB = "";
@@ -23,11 +25,10 @@ public class Questao {
     }
 
     public String leiaResposta() {
-        Scanner ler = new Scanner(System.in);
         String resp;
         do {
             System.out.println("Digite a resposta: ");
-            resp = ler.next();
+            resp = LEITOR.next();
         } while (!respostaValida(resp));
         return resp;
     }
